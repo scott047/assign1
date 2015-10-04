@@ -11,7 +11,7 @@ void setup(){
   enemyImg=loadImage("img/enemy.png");
   treasureImg=loadImage("img/treasure.png");
   shipImg=loadImage("img/fighter.png");
-  speedX=floor(random(10,21));
+  speedX=floor(random(5,16));
   speedY=floor(random(-2,2));
   treasureX=floor(random(20,620));
   treasureY=floor(random(20,200));
