@@ -1,8 +1,3 @@
-PImage background1Img;
-PImage background2Img;
-PImage shipImg;
-PImage hpImg;
-PImage enemyImg;
 PImage treasureImg;
 int POINT;
 float enemyX,enemyY,treasureX,treasureY,backgroundX,backgroundY,hpX,hpY,blood,speedX,speedY;
@@ -53,7 +48,7 @@ void draw(){
   }
      if(enemyX+40>=mouseX&&mouseX+40>=enemyX){
        if(enemyY+40>=mouseY&&mouseY+40>=enemyY){
-       speedX=floor(random(10,21));
+       speedX=floor(random(5,16));
        speedY=floor(random(-2,2));
        enemyX=20;
        enemyY=floor(random(40,440));
@@ -62,7 +57,7 @@ void draw(){
     }
     if(enemyX>680||enemyX<-40||enemyY<-40||enemyY>480){
       
-      speedX=floor(random(10,21));
+      speedX=floor(random(5,16));
       speedY=floor(random(-2,2));
        enemyX=20;
        enemyY=floor(random(40,440));
@@ -71,8 +66,8 @@ void draw(){
     }
   enemyX+=speedX;
   enemyY+=speedY;
-  backgroundX=backgroundX+10;
-  backgroundY=backgroundY+10;
+  backgroundX=backgroundX+5;
+  backgroundY=backgroundY+5;
   backgroundX=backgroundX%1280;
   backgroundY=backgroundY%1280;
   }
