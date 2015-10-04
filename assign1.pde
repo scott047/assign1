@@ -1,3 +1,8 @@
+PImage background1Img;
+PImage background2Img;
+PImage shipImg;
+PImage hpImg;
+PImage enemyImg;
 PImage treasureImg;
 int POINT;
 float enemyX,enemyY,treasureX,treasureY,backgroundX,backgroundY,hpX,hpY,blood,speedX,speedY;
