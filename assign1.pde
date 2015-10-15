@@ -21,8 +21,8 @@ void setup(){
   treasureX=floor(random(20,620));
   treasureY=floor(random(20,200));
   POINT=0;
-  backgroundX=640;
-  backgroundY=1280;
+  backgroundX=0;
+  backgroundY=640;
   enemyX=20;
   enemyY=floor(random(40,440));
   hpX=20;
