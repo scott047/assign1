@@ -71,8 +71,8 @@ void draw(){
     }
   enemyX+=speedX;
   enemyY+=speedY;
-  backgroundX=backgroundX+5;
-  backgroundY=backgroundY+5;
+  backgroundX=backgroundX+1;
+  backgroundY=backgroundY+1;
   backgroundX=backgroundX%1280;
   backgroundY=backgroundY%1280;
   }
