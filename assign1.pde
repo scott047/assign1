@@ -27,7 +27,7 @@ void setup(){
   enemyY=floor(random(40,440));
   hpX=20;
   hpY=20;
-  blood=floor(random(175,225);
+  blood=floor(random(175,225));
   }
 
 void draw(){
