@@ -1,17 +1,19 @@
 PImage background1Img;
 PImage background2Img;
+PImage background3Img;
 PImage shipImg;
 PImage hpImg;
 PImage enemyImg;
 PImage treasureImg;
 int POINT;
-float enemyX,enemyY,treasureX,treasureY,backgroundX,backgroundY,hpX,hpY,blood,speedX,speedY;
+float enemyX,enemyY,treasureX,treasureY,backgroundX,backgroundY,backgroundZ,hpX,hpY,blood,speedX,speedY;
 boolean isPlaying=true;
 
 void setup(){
   size(640,480);
   background1Img=loadImage("img/bg1.png");
   background2Img=loadImage("img/bg2.png");
+  background3Img=loadImage("img/bg1.png");
   hpImg=loadImage("img/hp.png");
   enemyImg=loadImage("img/enemy.png");
   treasureImg=loadImage("img/treasure.png");
@@ -22,7 +24,7 @@ void setup(){
   treasureY=floor(random(20,200));
   POINT=0;
   backgroundX=0;
-  backgroundY=640;
+ 
   enemyX=20;
   enemyY=floor(random(40,440));
   hpX=20;
@@ -32,10 +34,9 @@ void setup(){
 
 void draw(){
   if(isPlaying){
-  imageMode(CORNERS);
-  image(background1Img,backgroundX-640,0,backgroundX,480);
-  imageMode(CORNERS);
-  image(background2Img,backgroundY-640,0,backgroundY,480);
+  image(background1Img,backgroundX,0);
+  image(background2Img,backgroundY,0);
+  image(background3Img,backgroundZ,0);
   fill(220,0,0);
   rectMode(CORNERS);
   rect(30,20,blood,40);
@@ -71,10 +72,10 @@ void draw(){
     }
   enemyX+=speedX;
   enemyY+=speedY;
-  backgroundX=backgroundX+1;
-  backgroundY=backgroundY+1;
+  backgroundX++;
+  backgroundY=backgroundX-640;
+  backgroundZ=backgroundY-640;
   backgroundX=backgroundX%1280;
-  backgroundY=backgroundY%1280;
   }
   if(blood<=30){
     println("TOTAL_SCORE:"+POINT);
@@ -82,3 +83,7 @@ void draw(){
     isPlaying=false;
   }
 }
+
+
+
+  
