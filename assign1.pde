@@ -27,7 +27,7 @@ void setup(){
   enemyY=floor(random(40,440));
   hpX=20;
   hpY=20;
-  blood=225;
+  blood=floor(random(175,225);
   }
 
 void draw(){
@@ -76,7 +76,7 @@ void draw(){
   backgroundX=backgroundX%1280;
   backgroundY=backgroundY%1280;
   }
-  if(blood==30){
+  if(blood<=30){
     println("TOTAL_SCORE:"+POINT);
     println("GAME_OVER");
     isPlaying=false;
